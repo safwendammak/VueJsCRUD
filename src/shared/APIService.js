@@ -4,9 +4,6 @@ const API_URL = 'http://localhost:8000/api';
 
 export class APIService {
 
-    constructor() {
-    }
-
     deletePost(id) {
         return axios.delete(API_URL + '/post/delete/' + id).then(response => response.data);
     }

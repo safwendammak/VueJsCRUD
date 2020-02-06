@@ -29,7 +29,7 @@
 </template>
 
 <script>
-    import {APIService} from "../APIService";
+    import {APIService} from "../shared/APIService";
 
     const apiService = new APIService();
     export default {
@@ -41,9 +41,7 @@
         methods: {
             addPost() {
                 apiService.addPost(this.post).then((data) => {
-                    console.log(this.posts);
                     this.$router.push({name: 'posts'});
-
                 });
             }
         }

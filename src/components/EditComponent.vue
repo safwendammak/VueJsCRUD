@@ -29,7 +29,7 @@
 </template>
 
 <script>
-    import {APIService} from "../APIService";
+    import {APIService} from "../shared/APIService";
 
     const apiService = new APIService();
     export default {
@@ -49,7 +49,6 @@
                 });
             },
             updatePost() {
-                console.log(this.post);
                 apiService.updatePost(this.post, this.$route.params.id).then((data) => {
                     this.$router.push({name: 'posts'});
                 });

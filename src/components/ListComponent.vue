@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <h1>Posts</h1>
         <div class="row">
             <div class="col-md-10"></div>
@@ -9,7 +8,6 @@
             </div>
         </div>
         <br/>
-
         <table class="table table-hover">
             <thead>
             <tr>
@@ -40,7 +38,7 @@
 </template>
 
 <script>
-    import {APIService} from "../APIService";
+    import {APIService} from "../shared/APIService";
 
     const apiService = new APIService();
 
@@ -57,23 +55,18 @@
             getPosts() {
                 apiService.getPosts().then((data) => {
                     this.posts = data.data;
-                    console.log(this.posts);
                 });
             },
             deletePost(id) {
-                // Loop because multi dimensial array
-                for (var i = 0; i < this.posts.length; i++) {
-                    if (this.posts[i].id === id) {
-                        console.log('i=' + i);
-                        break;
-                    }
-                }
                 apiService.deletePost(id).then((data) => {
-                    // this.posts = data.data;
-                    console.log(this.posts);
+                    // Loop because multi dimensional array
+                    for (var i = 0; i < this.posts.length; i++) {
+                        if (this.posts[i].id === id) {
+                            break;
+                        }
+                    }
                     this.posts.splice(i, 1);
                 });
-
             }
         }
     }
