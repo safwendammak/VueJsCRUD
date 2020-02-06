@@ -4,13 +4,10 @@
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <router-link class="nav-link" to="/">Home</router-link>
+                    <router-link class="nav-link" to="/">Posts</router-link>
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link" to="/create">Create Post</router-link>
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/posts">Posts</router-link>
                 </li>
             </ul>
         </nav>
