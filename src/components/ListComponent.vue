@@ -8,7 +8,7 @@
             </div>
         </div>
         <br/>
-        <table class="table table-hover">
+        <table class="table table-hover tab">
             <thead>
             <tr>
                 <th>ID</th>
@@ -71,3 +71,9 @@
         }
     }
 </script>
+<style>
+    body, html, * {
+        background-color: #343a40;
+        color: white;
+    }
+</style>
